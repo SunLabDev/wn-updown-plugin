@@ -1,0 +1,20 @@
+{% set votable = __SELF__.votable ?? __SELF__.property('votable') %}
+{% set userVoted = user.voteFor(votable) %}
+{% set userUpVoted = userVoted and userVoted.vote == 1 %}
+{% set userDownVoted = userVoted and userVoted.vote == -1 %}
+
+<button type="button"
+        data-request="{{ __SELF__ }}::{{ userUpVoted ? 'onRemoveVote' : 'onUpVote' }}"
+        data-request-data="{{ votable.votableModel }}"
+        data-request-update="'{{ __SELF__~'::arrows' }}': '#{{ votable.votableModel|slug }}'"
+        style="transform: rotate(180deg); {% if userUpVoted %} color: blue; {% endif %}"
+>V</button>
+
+<span>{{ votable.votableNote }}</span>
+
+<button type="button"
+        data-request="{{ __SELF__ }}::{{ userDownVoted ? 'onRemoveVote' : 'onDownVote' }}"
+        data-request-data="{{ votable.votableModel }}"
+        data-request-update="'{{ __SELF__~'::arrows' }}': '#{{ votable.votableModel|slug }}'"
+        style="{% if userDownVoted %} color: blue; {% endif %}"
+>V</button>

@@ -1,0 +1,27 @@
+{
+    "name": "sunlab/wn-updown-plugin",
+    "type": "winter-plugin",
+    "description": "Plugin for WinterCMS that allows your users to up/down-vote any models",
+    "homepage": "https://github.com/sunlabdev/wn-updown-plugin",
+    "keywords": ["winter cms", "winter", "plugin", "updown"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Romain 'Maz' B",
+            "email": "romainmazb@gmail.com",
+            "role": "Original Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/sunlabdev/wn-updown-plugin/issues",
+        "source": "https://github.com/sunlabdev/wn-updown-plugin"
+    },
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0",
+        "winter/wn-user-plugin": "^2.0"
+    },
+    "extra": {
+        "installer-name": "updown"
+    }
+}

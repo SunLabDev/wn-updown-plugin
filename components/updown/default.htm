@@ -1,0 +1,7 @@
+{% set votablee = (__SELF__.votable ?? __SELF__.property('votable')) %}
+
+<div id="{{ votablee.votableModel|slug }}"
+     style="display: flex; flex-direction: column"
+>
+    {% partial __SELF__~'::arrows' %}
+</div>
