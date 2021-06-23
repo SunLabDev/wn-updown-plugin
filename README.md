@@ -2,6 +2,10 @@
 
 UpDown feature on any model. Easily.
 
+A tiny demo, based on two distinct model: `Winter\Forum\Models\Post` and a custom plugin's Comment model.
+
+https://user-images.githubusercontent.com/53976837/123177419-86aaa000-d485-11eb-8186-a133faae11a9.mp4
+
 ### Composer installation
 ```terminal
 composer require sunlab/wn-updown-plugin
