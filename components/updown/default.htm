@@ -1,6 +1,6 @@
-{% set votablee = (__SELF__.votable ?? __SELF__.property('votable')) %}
+{% set votable = (__SELF__.votable ?? __SELF__.property('votable')) %}
 
-<div id="{{ votablee.votableModel|slug }}"
+<div id="{{ votable.votableModel|slug }}"
      style="display: flex; flex-direction: column"
 >
     {% partial __SELF__~'::arrows' %}
